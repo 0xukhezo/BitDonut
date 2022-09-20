@@ -54,7 +54,7 @@ function Coins({ coins }) {
         coin.name.toLowerCase().includes(search)
       );
     }
-    if (shorts === 1) {
+    if (shorts == 1) {
       copy = copy.sort((a, b) => {
         if (a.current_price > b.current_price) {
           return -1;
@@ -64,7 +64,7 @@ function Coins({ coins }) {
         }
         return 0;
       });
-    } else if (shorts === 0) {
+    } else if (shorts == 0) {
       copy = copy.sort((a, b) => {
         if (a.current_price > b.current_price) {
           return 1;
