@@ -1,0 +1,22 @@
+#logging {
+  margin: 25% 45%;
+  color: white;
+  animation: bounce 0.3s infinite alternate;
+  -webkit-animation: bounce 0.3s infinite alternate;
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
