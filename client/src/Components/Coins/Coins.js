@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CoinCard from "../CoinCard/CoinCard";
+import NavBar from "../Layout/NavBar";
 
 function Coins({ coins }) {
   let [open, setOpen] = useState(false);
@@ -71,7 +72,8 @@ function Coins({ coins }) {
   }, [shorts, search]);
 
   return (
-    allCoins && (
+    <>
+      <NavBar />
       <div>
         {open === true ? (
           <>
@@ -118,13 +120,13 @@ function Coins({ coins }) {
           {allCoinsCopy?.map((coin) => {
             return (
               <div key={coin.id}>
-                <CoinCard coin={coin} bitcoin={bitcoin} />
+                <CoinCard coin={coin} bitcoin={bitcoin[0]} />
               </div>
             );
           })}
         </div>
       </div>
-    )
+    </>
   );
 }
 

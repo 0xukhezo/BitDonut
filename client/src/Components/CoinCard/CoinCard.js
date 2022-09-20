@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function CoinCard(props) {
-  let coin = props.coin;
-  let btc = props.bitcoin[0];
+function CoinCard({ coin, bitcoin }) {
   return (
     <Link to={`/${coin.id}`}>
-      <ul>
+      <ul id="coin-info">
         <li>
           <img src={coin.image} />
           <span>{coin.name}</span>
@@ -32,8 +30,8 @@ function CoinCard(props) {
         </li>
 
         <li>
-          {(coin.current_price / btc.current_price).toFixed(6)}{" "}
-          {btc.symbol.toUpperCase()}
+          {(coin.current_price / bitcoin.current_price).toFixed(6)}{" "}
+          {bitcoin.symbol.toUpperCase()}
         </li>
       </ul>
     </Link>
