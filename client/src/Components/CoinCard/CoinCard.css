@@ -1,0 +1,21 @@
+#coin-info {
+  padding: 3% 2%;
+  list-style: none;
+  background-color: #1e1f23;
+  border: 1px solid #6366f1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-radius: 30px;
+  color: white;
+}
+#coin-info li {
+  display: flex;
+  margin: auto 0;
+}
+#coin-info span {
+  margin: auto 0;
+}
+#coin-info img {
+  width: 25%;
+  margin-right: 20px;
+}

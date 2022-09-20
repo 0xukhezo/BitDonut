@@ -1,0 +1,77 @@
+#display {
+  background-color: #191b1f;
+  margin-top: 120px;
+}
+#header {
+  padding: 20px 2%;
+  list-style: none;
+  background-color: white;
+  border: 1px solid #6366f1;
+  display: grid;
+  color: black;
+  grid-template-columns: repeat(7, 1fr);
+  border-radius: 30px;
+  margin: 2% 2%;
+}
+
+#coin-list {
+  margin: 1% 2%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+#coin-list ul:hover {
+  box-shadow: 0px 7px 10px 0px #6366f1;
+}
+
+#coin-list a {
+  text-decoration: none;
+}
+
+#filters-box {
+  display: flex;
+  justify-content: space-between;
+}
+#number-input {
+  margin: 20px 0 0 5%;
+  width: 50px;
+  height: 25%;
+  border-radius: 15px;
+  border: 2px solid #6366f1;
+}
+#search-container label {
+  margin: 22px;
+}
+#filters {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 2% 7% 2% 0;
+}
+
+#filters input {
+  visibility: hidden;
+}
+
+#filters span {
+  margin-right: 20px;
+}
+
+#filters li {
+  border: 2px solid #6366f1;
+  background-color: #1e1f23;
+  padding: 5px 10px;
+  color: white;
+  justify-content: center;
+  border-radius: 15px;
+  margin: 0 0 0 10px;
+  appearance: none;
+}
+#filters li:hover {
+  background-color: #6366f1;
+}
+.btn {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 7%;
+}

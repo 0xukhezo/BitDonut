@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import CoinCard from "../CoinCard/CoinCard";
 import NavBar from "../Layout/NavBar";
 
+import "./Coins.css";
+
 function Coins({ coins }) {
   let [open, setOpen] = useState(false);
   let [shorts, setShort] = useState();
@@ -74,14 +76,14 @@ function Coins({ coins }) {
   return (
     <>
       <NavBar />
-      <div>
+      <div id="display">
         {open === true ? (
           <>
-            <div>
+            <div className="btn">
               <button onClick={hiddeDisplay}>Ocultar</button>
             </div>
-            <div>
-              <ul>
+            <div id="filters-box">
+              <ul id="filters">
                 {sortOptions.map((option) => (
                   <li>
                     <label htmlFor={option.value}>
@@ -101,12 +103,12 @@ function Coins({ coins }) {
             </div>
           </>
         ) : (
-          <div>
+          <div className="btn">
             <button onClick={openDisplay}>Filtros</button>
           </div>
         )}
 
-        <ul>
+        <ul id="header">
           <li>Nombre</li>
           <li>Precio </li>
           <li>Más alto 24h </li>
@@ -116,7 +118,7 @@ function Coins({ coins }) {
           <li>Cambio con BTC</li>
         </ul>
 
-        <div>
+        <div id="coin-list">
           {allCoinsCopy?.map((coin) => {
             return (
               <div key={coin.id}>

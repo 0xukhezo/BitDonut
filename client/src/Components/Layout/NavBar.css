@@ -1,0 +1,43 @@
+.HeaderNav {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+#NavBar-display {
+  display: flex;
+  position: fixed;
+  margin: auto 0;
+  padding-top: 10px;
+}
+#NavBar a {
+  text-decoration: none;
+  margin-right: 40px;
+  font-size: large;
+  font-weight: 700;
+  color: white;
+}
+#navlink-text {
+  display: flex;
+  width: 1035px;
+  justify-content: space-between;
+}
+#navlink-text div {
+  display: inline-flex;
+  margin: 2% 0;
+}
+.sticky {
+  background-color: rgba(40, 35, 45, 0.7);
+  width: 100%;
+}
+
+.sticky a li {
+  color: white;
+  margin: 10px 0 10px 0px;
+}
+
+.sticky a svg {
+  margin-top: 10px;
+}

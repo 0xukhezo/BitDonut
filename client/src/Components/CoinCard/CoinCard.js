@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./CoinCard.css";
 
 function CoinCard({ coin, bitcoin }) {
   return (

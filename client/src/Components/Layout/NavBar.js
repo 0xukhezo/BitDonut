@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import "./NavBar.css";
+
 function NavBar() {
   window.addEventListener("scroll", function () {
     let header = document.getElementById("NavBar-display");
