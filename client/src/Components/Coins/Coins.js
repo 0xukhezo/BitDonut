@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CoinCard from "../CoinCard/CoinCard";
 import NavBar from "../Layout/NavBar";
+import SearchBar from "../SearchBar/SearchBar";
 
 import "./Coins.css";
 
@@ -17,6 +18,10 @@ function Coins({ coins }) {
 
   let closeSearch = () => {
     setSearch("");
+  };
+
+  let getInfo = (searching) => {
+    setSearch(searching);
   };
 
   let openDisplay = () => {
@@ -83,6 +88,9 @@ function Coins({ coins }) {
               <button onClick={hiddeDisplay}>Ocultar</button>
             </div>
             <div id="filters-box">
+              <div id="search-container">
+                <SearchBar getInfo={getInfo} />
+              </div>
               <ul id="filters">
                 {sortOptions.map((option) => (
                   <li>
