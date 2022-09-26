@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../Layout/NavBar";
 import CoinPortfolioCard from "./CoinPortfolioCard";
+import "./Portfolio.css";
 
 function Portfolio({ coins }) {
   let bitcoin = coins[0];
@@ -145,6 +146,11 @@ function Portfolio({ coins }) {
     return str.join(".");
   }
 
+  let totalOfCurrentPrice = getInfoOfPortfolio("total");
+  let labelForChart = portfolio.map((currentCoinInPortfolio) => {
+    return currentCoinInPortfolio.symbol.toUpperCase();
+  });
+
   useEffect(() => {
     createPortfolio();
   }, [portfolioCurrent]);
@@ -160,23 +166,28 @@ function Portfolio({ coins }) {
   return (
     <div>
       <NavBar />
-      <div>
+      <div id="Display">
         <div>
-          <div>
-            <button onClick={openDropDown} id="dropdown-portfolio">
-              <img src={coinSelected?.image} />
+          <div id="ContainerInput">
+            <button
+              onClick={openDropDown}
+              className="dropdown"
+              id="dropdown-portfolio"
+            >
+              <img src={coinSelected?.image} id="img-coin-dropdown" />
               <span>{coinSelected?.symbol.toUpperCase()}</span>
             </button>
             {dropDownCoin === true && (
-              <div>
+              <div className="Dropdow-panel" id="dropdown-panel-portfolio">
                 {coins?.map((coin) => {
                   return (
                     <button
                       name="symbol"
                       value={coin.symbol}
                       onClick={handleCoin}
+                      className="Dropdow-Coins"
                     >
-                      <img src={coin.image} />
+                      <img src={coin.image} id="img-coin" />
                       <span>{coin.symbol.toUpperCase()}</span>
                     </button>
                   );
@@ -193,10 +204,10 @@ function Portfolio({ coins }) {
                 onChange={handleInputChange}
                 placeholder="0"
               />
-              <button>Añadir al Portfolio</button>
+              <button id="coin-submit">Añadir al Portfolio</button>
             </form>
           </div>
-          <div>
+          <div id="display-cards">
             {portfolio.map((portfolioCoin) => {
               let currentCoin = coins.filter((coin) => {
                 return coin.symbol === portfolioCoin.symbol;
@@ -210,15 +221,17 @@ function Portfolio({ coins }) {
             })}
           </div>
         </div>
+
         <div>
-          <ul>
+          <ul id="display-totals">
             <li>Total del Portfolio</li>
-            <li>{separator(Math.round(total))} $</li>
+            <li className="Data">{separator(Math.round(total))} $</li>
             <li>Cambio en 24h</li>
             <li
               style={{
                 color: changeTotal < 0 ? "#dc2626" : "#22c55e",
               }}
+              className="Data"
             >
               {separator(Math.round(changeTotal))} ${" "}
               {changeTotal > 0 ? " ↑" : " ↓"}
@@ -228,6 +241,7 @@ function Portfolio({ coins }) {
               style={{
                 color: changeTotalPercentage < 0 ? "#dc2626" : "#22c55e",
               }}
+              className="Data"
             >
               {changeTotalPercentage} %{" "}
               {changeTotalPercentage > 0 ? " ↑" : " ↓"}
@@ -239,9 +253,9 @@ function Portfolio({ coins }) {
                 return <li>{oneCoinSymbol.symbol.toUpperCase()}</li>;
               })}
             </div>
-            <div>
+            <div className="Data">
               {percentageOfCoins?.map((oneCoinPercentage) => {
-                return <li>{oneCoinPercentage} %</li>;
+                return <li id="PercentageOfCoin">{oneCoinPercentage} %</li>;
               })}
             </div>
           </ul>
