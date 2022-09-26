@@ -1,0 +1,16 @@
+#display-info {
+  border: 2px solid #6366f1;
+  border-radius: 15px;
+  padding: 10px;
+  width: 75%;
+  font-size: larger;
+  font-weight: 500;
+  background-color: white;
+}
+#display-info span {
+  margin: auto;
+}
+#display-info:hover {
+  background-color: #6366f1;
+  color: white;
+}
