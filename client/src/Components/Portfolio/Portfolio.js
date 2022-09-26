@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../Layout/NavBar";
 import CoinPortfolioCard from "./CoinPortfolioCard";
+import DonutChart from "./DonutChart";
 import "./Portfolio.css";
 
 function Portfolio({ coins }) {
@@ -220,6 +221,15 @@ function Portfolio({ coins }) {
               );
             })}
           </div>
+        </div>
+
+        <div>
+          {portfolio.length !== 0 && (
+            <DonutChart
+              labelForChart={labelForChart}
+              totalOfCurrentPrice={totalOfCurrentPrice}
+            />
+          )}
         </div>
 
         <div>
