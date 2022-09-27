@@ -1,0 +1,332 @@
+#btn-new-campaing {
+  margin: 0 3% 0 0;
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+#wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  margin: 0 2.5%;
+}
+#title-campaings {
+  font-weight: 80;
+  font-size: 72px;
+  margin-left: 3%;
+  color: white;
+}
+#display-campaings {
+  background-color: #191b1f;
+  margin-top: 50px;
+}
+#header-campaings {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+}
+#header-campaings a {
+  height: min-content;
+  margin: auto 3%;
+}
+#back-btn {
+  margin: 30px 0 0 4%;
+}
+#section-campaigns {
+  margin: 2% 3% 0 4%;
+  padding-bottom: 0;
+  color: white;
+  transition: transform 0.2s;
+  text-decoration: none;
+}
+#request-complete {
+  display: flex;
+  justify-content: center;
+  padding-right: 20px;
+  font-size: 24px;
+  color: #abf69b;
+}
+#section-requests {
+  margin: 2% 3% 0 2%;
+  padding: 3%;
+  color: white;
+  border-radius: 50px;
+  background-color: #1e1f23;
+  border: 1px solid #6366f1;
+}
+#section-requests div {
+  margin: 2% 0 0 3%;
+}
+#section-requests button {
+  margin: 2% 3% 0 0;
+}
+#section-campaigns div {
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+  align-items: center;
+  margin: 0 -20px;
+  justify-content: center;
+  background-color: #1e1f23;
+  border: 1px solid #6366f1;
+}
+#section-campaigns div p {
+  display: flex;
+  justify-content: space-between;
+}
+#section-campaigns:hover {
+  transform: scale(0.95);
+}
+#campaing-details {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  border-radius: 50px;
+  margin: 2.5%;
+  padding: 3%;
+  background-color: #1e1f23;
+  border: 1px solid #6366f1;
+}
+#campaing-details div {
+  display: table-column;
+  align-items: center;
+  justify-content: center;
+}
+
+#forms-campaigns p {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 35px;
+}
+#form-contribute {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+#contribute-btn {
+  margin-left: 19px;
+}
+#contribution-input {
+  margin-top: 5px;
+  height: 30px;
+  width: 80px;
+  background-color: #1e1f23;
+  border: none;
+  border-bottom: 1px solid #6366f1;
+  font-size: x-large;
+  text-align: end;
+  color: white;
+}
+#error-transaction {
+  width: max-content;
+  margin: auto;
+  color: black;
+  font-size: x-large;
+  background-color: #ed5858;
+  border: 1px solid #ed5858;
+  border-radius: 20px;
+  padding: 1% 2%;
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name: parpadeo;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+#current-transaction {
+  width: max-content;
+  margin: auto;
+  color: black;
+  font-size: x-large;
+  background-color: #ffb14e;
+  border: 1px solid #ffb14e;
+  border-radius: 20px;
+  padding: 1% 2%;
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name: parpadeo;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+#correct-transaction {
+  width: max-content;
+  margin: auto;
+  color: black;
+  font-size: x-large;
+  background-color: #abf69b;
+  border: 1px solid #abf69b;
+  border-radius: 20px;
+  padding: 1% 2%;
+}
+#new-campaing-bg {
+  background-image: url("../../Images/Grid.png");
+  width: 90%;
+  height: 600px;
+  margin: 8% 5%;
+  position: absolute;
+  border-radius: 150px;
+  color: white;
+}
+#new-request-bg {
+  background-image: url("../../Images/Grid.png");
+  width: 90%;
+  height: 600px;
+  margin: 8% 5%;
+  position: absolute;
+  border-radius: 150px;
+  color: white;
+}
+#new-campaing-bg > div {
+  margin-top: 100px;
+}
+#form-new-campaign h1 {
+  font-weight: 80;
+  font-size: 72px;
+}
+#form-new-campaign {
+  margin: 7% 33% 0 33%;
+  display: column;
+  height: 400px;
+  z-index: 90000;
+}
+#new-request-bg > div {
+  margin-top: 10px;
+}
+#form-new-request h1 {
+  font-weight: 60;
+  font-size: 60px;
+}
+#form-new-request {
+  margin: 7% 23% 8% 23%;
+  display: column;
+  height: 400px;
+  z-index: 90000;
+}
+#form-new-campaign div {
+  border-radius: 20px;
+  border: 2px solid #6366f1;
+  background-color: #1e1f23;
+}
+#form-new-request div {
+  border-radius: 20px;
+  border: 2px solid #6366f1;
+  background-color: #1e1f23;
+}
+#form-new-campaign h1,
+form {
+  margin: 6% 6%;
+}
+#form-new-request h1,
+form {
+  margin: 6% 6%;
+}
+#form-new-campaign p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#form-new-request p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#form-new-campaign input {
+  margin-top: 5px;
+  margin-left: 30px;
+  border-radius: 30px;
+  height: 30px;
+  width: 220px;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #6366f1;
+  font-size: x-large;
+  text-align: end;
+  color: #6366f1;
+}
+#description-request {
+  margin-top: 5px;
+  margin-left: 30px;
+  border-radius: 30px;
+  height: 80px;
+  width: 330px;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #6366f1;
+  padding: 3%;
+  color: #6366f1;
+}
+#address-request {
+  margin-top: 5px;
+  margin-left: 30px;
+  border-radius: 30px;
+  height: 30px;
+  width: 330px;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #6366f1;
+  text-align: end;
+  color: #6366f1;
+}
+#amount-request {
+  margin-top: 5px;
+  margin-left: 30px;
+  border-radius: 30px;
+  height: 30px;
+  width: 100px;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #6366f1;
+  text-align: end;
+  font-size: x-large;
+  color: #6366f1;
+}
+
+@-moz-keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
