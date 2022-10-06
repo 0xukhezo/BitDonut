@@ -14,7 +14,6 @@ function Campaings() {
     const campaingsFromFetch = await factory.methods
       .getDeployedCampaing()
       .call();
-
     setCampaings(campaingsFromFetch);
     setIsLoadding(false);
   }
